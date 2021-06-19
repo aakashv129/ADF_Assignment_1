@@ -1,3 +1,5 @@
+#Program to Print all Prime Numbers in an Interval of 5 seconds
+
 import time
 lower=int(input("Enter lower range: "))
 upper=int(input("Enter upper range: "))
