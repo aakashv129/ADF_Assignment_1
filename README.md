@@ -1,6 +1,17 @@
 # ADF_Assignment_1
 1.Program to read a file and store the unique words in a list sorted based on the length of word in a new file along with each word length appended to it.
 
+Read text file in read mode.
+Convert text to lower case or upper case. We do not want ‘apple’ to be different from ‘Apple’.
+Split file contents into list of words.
+Strip function to remove the punctuation marks and replacing 's with nothing.
+Declare an empty list and using for loop unique words are added into the list.
+sor() function to sort the list on lexicographical alphabetical order.
+sorted() function to sort the list based on the length of the words.
+Open the another text file in write mode.
+Append the unique words along with its length in the file.
+Then print the contents inside the file.
+
 2.Program to read a CSV (CSV with n number of columns) and store it in DICT of list.
 
 import csv module.
