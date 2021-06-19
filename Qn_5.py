@@ -1,3 +1,5 @@
+#Program to Convert Decimal to Binary, Octal and Hexadecimal
+
 n=int(input("Enter the decimal number:"))
 def binarynum(n):
     binary=[]
