@@ -1,5 +1,3 @@
-#Program to get an application (name , age , gender, salary, state, city)
-
 name=input("Enter the name:")
 age=int(input("Enter the age:"))
 gender=input("Enter the gender:")
@@ -33,4 +31,5 @@ class employee:
 
 emp=employee()
 emp.declareemployee(name,age,gender,salary,state,city)
-emp.printemployee()
+emp.printemployee(
+

@@ -1,5 +1,3 @@
-#Program to Find HCF or GCD
-
 def gcd(a,b):
     if(a>b):
         temp=b
