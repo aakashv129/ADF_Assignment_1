@@ -2,6 +2,7 @@
 Read the input file from the command line argument.
 Open the file in read mode if the file doesn't exit then print File not found.
 Then split the words in the file into a list.
+
 a)Print the number of words having prefix with “To” in the input file.
 Declare a variable to count the prefix word "To".
 For loop to access the list and check whether the word begins with "To" or not.
