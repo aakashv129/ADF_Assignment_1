@@ -1,31 +1,32 @@
-import sys
 from collections import Counter
 import re
 import uuid
 import logging
+import config as cf
 
 
 def palin(w):
     return w == w[::-1]
 
 
-class Base:
-    def __init__(self):
+class Base(object):
+    def __init__(self, filename):
+        self.filename = filename
+
+    def readfile(self):
         try:
-            file = sys.argv[1]
-            self.f = open(file, 'r')
+            f = open(self.filename, 'r')
             logger.info("Input file is opened in read mode")
         except IOError:
             print("File not found")
             logger.error("File is not found")
             exit()
-
-    def readfile(self):
-        self.text = self.f.read()
-        logger.info("Input file is converted to list")
-        self.text = self.text.replace('.', ' ')
-        self.text = self.text.replace("'s", '')
-        self.f.close()
+        else:
+            self.text = f.read()
+            logger.info("Input file is converted to list")
+            self.text = self.text.replace('.', ' ')
+            self.text = self.text.replace("'s", '')
+            f.close()
 
     def writefile(self):
         unique_file = str(uuid.uuid1())
@@ -34,9 +35,8 @@ class Base:
 
 
 class Derived1(Base):
-    def __init__(self):
+    def main_method(self):
         logger.info("Base class is inherited")
-        super().__init__()
         super().readfile()
         super().writefile()
         logger.info("Base class methods are inherited")
@@ -122,7 +122,10 @@ if __name__ == '__main__':
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
     logger.info("Derived class is called")
-    d = Derived1()
+    x = cf.names["inputfile"]
+    print(x)
+    d = Derived1(x)
+    d.main_method()
     d.prefix()
     d.suffix()
     d.maximumrepeat()

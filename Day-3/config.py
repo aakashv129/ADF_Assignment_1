@@ -1,0 +1,3 @@
+names={
+    "inputfile":"input.txt",
+}
