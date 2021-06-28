@@ -131,11 +131,11 @@ class Base:
         gender_gen = gender_gen.lower()
         if years < 21 and gender_gen == 'male':
             self.reason = "Age is less than expected"
-            self.flag = 1
+            self.flag = 2
             logger.warning("Age Validation Failed")
         elif years < 18 and gender_gen == 'female':
             self.reason = "Age is less than expected"
-            self.flag = 1
+            self.flag = 2
             logger.warning("Age Validation Failed")
         else:
             self.reason = "Success"
@@ -149,7 +149,7 @@ class Base:
             logger.info("Nation is Validated")
         else:
             self.reason = "Should be an Indian/American"
-            self.flag = 1
+            self.flag = 2
             logger.warning("Nationality should be Indian/American")
         return self.flag, self.reason
 
@@ -170,8 +170,8 @@ class Base:
                       "karnataka", "madhya pradesh", "odisha", "tamil nadu",
                       "telangana", "west bengal"]
         if state_1.lower() not in state_list:
-            self.reason = "Invalid State"
-            self.flag = 1
+            self.reason = "State not in the list"
+            self.flag = 2
             logger.warning("State Validation Failed")
         else:
             self.reason = "Success"
@@ -209,11 +209,11 @@ class Base:
         """Salary Validation"""
         if sal < 10000:
             self.reason = "Salary is less than expected"
-            self.flag = 1
+            self.flag = 2
             logger.warning("Salary is less than Expected")
         elif salary > 90000:
             self.reason = "Salary is more than expected"
-            self.flag = 1
+            self.flag = 2
             logger.warning("Salary is more than expected")
         else:
             self.reason = "Success"
@@ -298,7 +298,13 @@ if flag == 0:
     for u in user_2:
         print(u)"""
 if flag == 1:
-    logger.info("If validation failed output is stored in table-2 only")
+    logger.info("validation failure")
+    k = "Validation Failure"
+    diction = {"Response ": k, "Reason ": reason}
+    diction = json.dumps(diction)
+    print(diction)
+if flag == 2:
+    logger.info("If Eligibility failed output is stored in table-2 only")
     my_cursor.execute("SELECT max(ID) FROM Request_info")
     my_id = my_cursor.fetchone()
     my_id = int(my_id[0])
