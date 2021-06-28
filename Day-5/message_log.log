@@ -1,0 +1,18 @@
+2021-06-28 14:44:55,765 : root : Class created for Validating the input details
+2021-06-28 14:44:55,765 : root : Getting input from user
+2021-06-28 14:45:53,110 : root : Checking for validity using flag
+2021-06-28 14:45:53,110 : root : First Name is Valid
+2021-06-28 14:45:53,110 : root : Middle name is Valid
+2021-06-28 14:45:53,110 : root : Last name is Valid
+2021-06-28 14:45:53,119 : root : Date-Of-Birth is valid
+2021-06-28 14:45:53,119 : root : Gender is Valid
+2021-06-28 14:45:53,119 : root : Age Validation is Succeeded
+2021-06-28 14:45:53,119 : root : Nation is Validated
+2021-06-28 14:45:53,119 : root : City is Validated
+2021-06-28 14:45:53,119 : root : State Validation Success
+2021-06-28 14:45:53,119 : root : Pin Code is in correct Format
+2021-06-28 14:45:53,119 : root : Qualification is Validated
+2021-06-28 14:45:53,119 : root : Salary is validated
+2021-06-28 14:45:53,119 : root : Pan_Card is Validated
+2021-06-28 14:45:53,119 : root : Storing the validated details into the tables
+2021-06-28 14:45:53,187 : root : Output is successfully printed in json format:{"Request_id ": 18, "Response ": "success"}
